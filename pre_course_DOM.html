@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function checkuser()
+{
+	var userName = document.getElementById("userName").value;
+	var userPwd = document.getElementById("userPwd").value;
+	console.log("用户名：" + userName + "|密码:" + userPwd);
+	//alert(‘用户名：’ + userName + ‘|密码:’ + userPwd);
+	if(userName == "123" && userPwd == "123"){
+		document.getElementById("checkInfo").innerHTML = "验证通过";
+	}else{
+		document.getElementById("userPwd").value = "";
+		document.getElementById("checkInfo").innerHTML = "用户名或密码错误";
+	}
+}
+</script>
+</head>
+<body>
+<h1><input type="text" id="userName" value="用户名"><h1>
+<h1><input type="password" id="userPwd" value="密码"><h1>
+<input type="button" onclick="checkuser()" value="提交">
+<h1><p id="checkInfo"></p><h1>
+</body>
+</html>
